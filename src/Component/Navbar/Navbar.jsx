@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { FaTimes } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import Movies from "../Movies/Movies";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [movies, setMovies] = useState([]);
@@ -39,9 +38,6 @@ const Navbar = () => {
         </span>
 
         <div className="means">
-          {/* <Link className="later" onClick={() => Navigate("/favoriter")}>
-            Watch Later
-          </Link> */}
           <CiSearch className="icon" onClick={showNav} />
           <div className={action}>
             <FaTimes className="times" onClick={removeNav} />
