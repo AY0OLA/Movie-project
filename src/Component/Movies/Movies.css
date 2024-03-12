@@ -1,0 +1,15 @@
+input {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 10px;
+}
+@media (max-width: 630px) {
+  input {
+    width: 120%;
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+    font-style: 600;
+  }
+}

@@ -1,0 +1,144 @@
+.Navbar {
+  display: flex;
+  background: color-mix(in srgb, purple, transparent 80%);
+  padding: 1.9rem 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s ease;
+  span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    .red {
+      color: color-mix(in srgb, red, transparent 60%);
+    }
+  }
+  .icon {
+    display: none;
+  }
+  .means {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .later {
+      margin: 0 10px;
+      border: 1px solid #333;
+      padding: 8px;
+      font-size: clamp(1rem, 0.7rem, 1.5rem);
+      border-radius: 10px;
+      color: #fff;
+      text-transform: capitalize;
+      letter-spacing: 2.3px;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+        background: #333;
+      }
+    }
+  }
+  .search {
+    .times {
+      display: none;
+    }
+  }
+}
+.film {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  text-align: center;
+  text-align: center;
+  margin-top: 2rem;
+  .movies {
+    margin-left: 1rem;
+
+    img {
+      height: 400px;
+      width: 312px;
+    }
+    .container {
+      background-color: color-mix(in srgb, brown, transparent 80%);
+      margin-bottom: 2rem;
+      color: color-mix(in srgb, #fff, transparent 20%);
+      .title {
+        font-weight: 700;
+        font-size: 1.3rem;
+        padding: 0.7rem;
+      }
+      .type {
+        font-size: 1.5rem;
+        font-family: inter;
+        text-transform: capitalize;
+      }
+      .year {
+        font-style: italic;
+        font-weight: 700;
+      }
+      .name {
+        margin-top: 1rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+@media (max-width: 1286px) {
+  .film {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .film {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .movies {
+      img {
+        width: auto;
+      }
+    }
+  }
+}
+@media (max-width: 630px) {
+  .Navbar {
+    position: relative;
+    .icon {
+      font-size: 2rem;
+      color: #fff;
+      display: block;
+      cursor: pointer;
+    }
+    .search {
+      transition: 0.9s ease-in-out;
+      position: absolute;
+      right: 4rem;
+      top: -100rem;
+      .times {
+        display: block;
+        top: -4rem;
+        color: #fff;
+        font-weight: 900;
+        z-index: 100;
+        cursor: pointer;
+        font-size: 2rem;
+        right: -3rem;
+        background: color-mix(in srgb, purple, transparent 10%);
+        position: absolute;
+      }
+    }
+    .setSearch {
+      top: 6rem;
+    }
+  }
+  .film {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

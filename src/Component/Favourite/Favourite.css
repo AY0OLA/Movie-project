@@ -1,0 +1,15 @@
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  button {
+    padding: 9px;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
