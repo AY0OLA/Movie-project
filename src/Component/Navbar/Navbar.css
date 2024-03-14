@@ -47,7 +47,7 @@
 }
 .film {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   text-align: center;
   text-align: center;
@@ -60,9 +60,8 @@
       width: 312px;
     }
     .container {
-      background-color: color-mix(in srgb, brown, transparent 80%);
       margin-bottom: 2rem;
-      color: color-mix(in srgb, #fff, transparent 20%);
+      color: color-mix(in srgb, #000, transparent 20%);
       .title {
         font-weight: 700;
         font-size: 1.3rem;
@@ -89,23 +88,7 @@
     }
   }
 }
-@media (max-width: 1286px) {
-  .film {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 1000px) {
-  .film {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    .movies {
-      img {
-        width: auto;
-      }
-    }
-  }
-}
+
 @media (max-width: 630px) {
   .Navbar {
     position: relative;
@@ -136,9 +119,5 @@
     .setSearch {
       top: 6rem;
     }
-  }
-  .film {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
   }
 }
